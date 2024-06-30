@@ -13,6 +13,7 @@ EXTENSIONS = [
     "media_wizard.admin:init_app",
     "media_wizard.rest:init_app",
     "media_wizard.media:init_app",
+    "media_wizard.tmdb:init_app"
 ]
 
 [development]
@@ -20,6 +21,7 @@ EXTENSIONS = [
     "flask_debugtoolbar:DebugToolbarExtension",
     "dynaconf_merge_unique"  # to reuse extensions list from [default]
 ]
+SQLALCHEMY_RECORD_QUERIES = true
 TEMPLATES_AUTO_RELOAD = true
 DEBUG = true
 DEBUG_TOOLBAR_ENABLED = true
@@ -38,6 +40,8 @@ DEBUG_TB_PANELS = [
     "flask_debugtoolbar.panels.profiler.ProfilerDebugPanel",
     "flask_debugtoolbar.panels.config_vars.ConfigVarsDebugPanel"
 ]
+
+TMDB_API_URL = "https://api.themoviedb.org/3"
 
 [testing]
 SQLALCHEMY_DATABASE_URI = 'sqlite:///testing.db'

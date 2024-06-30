@@ -1,4 +1,5 @@
 from sqlalchemy_serializer import SerializerMixin
+
 from media_wizard.db import db
 
 

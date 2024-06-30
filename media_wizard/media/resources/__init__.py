@@ -1,3 +1,3 @@
-from .media_request import MediaRequestResource
+from .media_request import MediaRequestItemResource, MediaRequestResource
 
-__all__ = ["MediaRequestResource"]
+__all__ = ["MediaRequestResource", "MediaRequestItemResource"]

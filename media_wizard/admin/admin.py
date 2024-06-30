@@ -6,7 +6,8 @@ from werkzeug.security import generate_password_hash
 
 from media_wizard.admin.models import User
 from media_wizard.db.database import db
-from media_wizard.media.models import MediaRequest
+from media_wizard.media.admin import MediaRequestAdmin, TVRequestSeasonAdmin
+from media_wizard.media.models import MediaRequest, TVRequestSeason
 
 # Proteck admin with login / Monkey Patch
 AdminIndexView._handle_view = login_required(AdminIndexView._handle_view)
@@ -28,7 +29,8 @@ def init_app(app):
     admin.init_app(app)
 
     # Add admin page for Product
-    admin.add_view(sqla.ModelView(MediaRequest, db.session))
+    admin.add_view(MediaRequestAdmin(MediaRequest, db.session))
+    admin.add_view(TVRequestSeasonAdmin(TVRequestSeason, db.session))
 
     # Add admin page for User
     admin.add_view(UserAdmin(User, db.session))

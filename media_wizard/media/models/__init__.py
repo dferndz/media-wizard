@@ -1,3 +1,3 @@
-from .media_request import MediaRequest
+from .media_request import MediaRequest, TVRequestSeason
 
-__all__ = ["MediaRequest"]
+__all__ = ["MediaRequest", "TVRequestSeason"]
