@@ -8,12 +8,11 @@ SECRET_KEY = "Pl3453Ch4ng3"
 PASSWORD_SCHEMES = ['pbkdf2_sha512', 'md5_crypt']
 EXTENSIONS = [
     "flask_bootstrap:Bootstrap",
-    "media_wizard.ext.database:init_app",
-    "media_wizard.ext.auth:init_app",
-    "media_wizard.ext.admin:init_app",
-    "media_wizard.ext.commands:init_app",
-    "media_wizard.ext.webui:init_app",
-    "media_wizard.ext.restapi:init_app",
+    "media_wizard.db:database",
+    "media_wizard.db:migrate",
+    "media_wizard.admin:init_app",
+    "media_wizard.rest:init_app",
+    "media_wizard.media:init_app",
 ]
 
 [development]
