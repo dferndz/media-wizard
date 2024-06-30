@@ -1,5 +1,5 @@
-from media_wizard.rest import api
 from media_wizard.media.resources import MediaRequestResource
+from media_wizard.rest import api
 
 
 def init_app(app):

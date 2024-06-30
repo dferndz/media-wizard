@@ -4,8 +4,8 @@ from flask_admin.contrib import sqla
 from flask_simplelogin import login_required
 from werkzeug.security import generate_password_hash
 
-from media_wizard.db.database import db
 from media_wizard.admin.models import User
+from media_wizard.db.database import db
 from media_wizard.media.models import MediaRequest
 
 # Proteck admin with login / Monkey Patch

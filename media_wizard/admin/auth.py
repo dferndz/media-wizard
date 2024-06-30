@@ -1,8 +1,8 @@
 from flask_simplelogin import SimpleLogin
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from media_wizard.db.database import db
 from media_wizard.admin.models import User
+from media_wizard.db.database import db
 
 
 def verify_login(user):
